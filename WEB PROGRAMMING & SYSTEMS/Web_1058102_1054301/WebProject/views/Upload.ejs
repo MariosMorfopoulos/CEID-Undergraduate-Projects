@@ -1,0 +1,96 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script  src="Upload.js"></script>
+  </head>
+  <body>
+    <h1>File Upload</h1>
+    <form action="/Upload" method="POST" id="Upload" enctype="multipart/form-data" accept=".har" multiple>
+        <label>Επιλέξτε HAR Αρχείο</label>
+        <input type="file" id="FileChosen" name="filename" accept=".har" />
+      <button type="button" onclick="FileUpload()">Submit</button>
+      <p >Do you Want to Edit your Profile?Click Here<a href="Edit">Edit Profile </a></p>
+    </form>
+    <form action="/logout" method="POST">
+      <button>Sign Out</button>
+    </form>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background: linear-gradient(to bottom, #359fc2 0%, #b8d0df 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+    <script src="Upload.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/user_upload">Upload File</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Heatmap">Heatmap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Edit">Stats</a>
+        </li>
+        <form action="/logout" method="POST">
+          <button>Sign Out</button>
+        </form>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <h1>File Upload</h1>
+    <form
+      action="/Upload"
+      method="POST"
+      id="Upload"
+      enctype="multipart/form-data"
+      accept=".har"
+      multiple
+    >
+      <label>Επιλέξτε HAR Αρχείο</label>
+      <input type="file" id="FileChosen" name="filename" accept=".har" />
+      <br /><br />
+      <button type="button" onclick="FileUpload()">Submit</button>
+      <br /><br />
+      <a id="download_link" download="my_exported_file.json" href="””">Download as Text File</a>
+      <!-- <p>
+        Do you Want to Edit your Profile?Click Here<a href="Edit"
+          >Edit Profile
+        </a>
+      </p> -->
+
+    </form>
+  </body>
+</html>
+

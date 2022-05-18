@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMA SIGN UP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="SignUp.js"></script>
+    <style>
+        body {
+          text-align: center;
+          box-sizing: border-box;
+          background: linear-gradient(to bottom, #33ccff 0%, #f3f0f1 100%);
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
+        }
+        form {
+            display: inline-block;
+            /* width: 550px;
+            height: 450px; */
+            margin: auto;
+            position: relative;
+        }
+        /* input {
+            width: 375px;
+            height: 25px;
+        } */
+
+      </style>
+</head>
+<body>
+    <br><br><br>
+    <h2 id="signp_form">SignUp Form</h2>
+
+    <form name="myform"  id="SignUp" action="/SignUp" method="POST">
+        <table>
+            <tr><th>Username:</th><td><input type="text" required name="username" id="onoma" placeholder="Εισάγεται το Όνομα σας"></td></tr>
+            <tr><th>Password:</th><td><input type="password" required name="password" id="pass" placeholder="Εισάγεται τον Κωδικό σας"></td></tr>
+            <tr><th>Email:</th><td><input type="email" required name="email" id="email" placeholder="Εισάγεται το Email σας"></td></tr> 
+            <BR></BR>
+            <tr><td><input  type="submit" class="button1" value="Submit" onclick="SignUpUser()" class="btn btn-primary"></td></tr>
+            <tr><td><input type="reset"  class="button2" value="Reset" onclick="Reset()" ></td></tr>
+        </table>
+
+    </form>
+</body>
+</html>

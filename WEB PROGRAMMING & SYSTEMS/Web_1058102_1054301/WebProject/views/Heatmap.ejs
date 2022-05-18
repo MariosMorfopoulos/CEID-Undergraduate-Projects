@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leaflet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<link
+		rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	  />
+	  <style>
+		body {
+		  background: linear-gradient(to bottom, #33ccff 0%, #f3f0f1 100%);
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
+		}
+		h1 {
+		  text-align: center;
+		}
+	  </style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link" href="/user_upload">Upload File</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="/Heatmap">Heatmap</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="Edit">Stats</a>
+			  </li>
+			  <form action="/logout" method="POST">
+				<button>Sign Out</button>
+			  </form>
+			</ul>
+		  </nav>
+		<div id="leaflet"></div>
+		<script src="https://unpkg.com/leaflet/dist/leaflet-src.js"></script>
+		<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="Heatmap.js"></script>
+	</body>
+</html>

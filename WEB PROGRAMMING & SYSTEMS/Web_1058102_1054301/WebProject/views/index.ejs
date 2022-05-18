@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="Login.js"></script>
+    <style>
+      body {
+        text-align: center;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom, #2587a8 0%, #afd0d6 100%);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="oli_forma">
+      <br><br><br>
+    <h2 id="log_form">Login Form</h2>
+    <div id="forma">
+      <!-- method get eixa  -->
+    <form action="/Upload" id="LoginUserAdmin" method="POST">   
+      <label for="uname"><b>Username : </b></label>
+      <input type="text" placeholder="Enter Username" name="username" id="username" required />
+      <br />
+      <label for="psw"><b>Password : </b></label>
+      <input type="password" placeholder="Enter Password" name="password" id="password" required />
+      <br/>
+
+        <button type="submit"  onclick="LoginUserAdmin()" class="btn btn-primary" >Login</button>
+
+      <div class="col">
+        
+      </form>
+      </div>
+    </div>
+    <span id="datetime"></span>
+    <p >Have An Account? If not <a href="SignUp">Sign Up </a></p>
+    <!-- <p><a href=""></a></p>  -->
+    <!-- <p>Create new account:<button onclick="window.location.href='SignUp'">Sign Up</button></p> -->
+    <!-- <p><a href=" class="btn btn-primary" role="button">Download</a></p>  -->
+  </body>
+</html>

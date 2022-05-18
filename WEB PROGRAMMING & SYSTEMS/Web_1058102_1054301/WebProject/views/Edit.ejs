@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/heatmapjs@2.0.2/heatmap.js"></script>
+    <script src = "https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/leaflet-heatmap@1.0.0/leaflet-heatmap.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js"></script>
+    <script  src="Edit.js"></script>
+    <link rel="stylesheet" href="hater.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<link
+		rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	  />
+      <style>
+        body {
+          background: linear-gradient(to bottom, #33ccff 0%, #f3f0f1 100%);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+        h2 {
+          text-align: center;
+        }
+      </style>
+    <!-- <style>
+        #HEATMAP2
+        {
+        width: 1000px; 
+        height: 400px;
+        }</style> -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/user_upload">Upload File</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Heatmap">Heatmap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Edit">Stats</a>
+          </li>
+          <form action="/logout" method="POST">
+            <button>Sign Out</button>
+          </form>
+        </ul>
+      </nav>
+    <div class="topnav">
+        <!-- <a href="#">Upload Data</a>
+        <a href="#">Data Visualization</a>
+        <a href="#">Edit Profile </a>
+        <a href="#"> Account Transactions</a> -->
+      </div>
+<br><br><br>
+      <h2 id="edit_da">Edit Profile</h2>
+
+    <div class="container">
+        <div class="leftbox">
+            <nav>
+                
+    <i class="fa fa-user" aria-hidden="true"></i>
+
+    <a>
+        <a onclick="tabs(0)"
+        class="tab">
+        <i class="fa fa-cog"></i>
+    </a>
+    <a>
+        <a onclick="tabs(1)"
+        class="tab">
+        <i class="fa fa-tasks"></i>
+        </a>
+    </nav>
+    </div>
+    <div class="rightbox">
+        <div class="Profile">
+            <form action="/Edit" id="EditUser" method="POST">
+                <h2>Update Username and Password</h2>
+                <label for="username">Username :</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password :</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit"  class="button3" value="Update" onclick="EditUser()">
+            </form>
+            <h3>Στατιστικά Δεδομένα του Χρήστη  </h3>
+            <div id="HARCOUNT"></div>
+            <div id="UPLOADDATE"></div>
+            <div id="COUNT"></div>
+            <!-- <p >Ο χάρτης με τις τοποθεσίες των IPs<a href="Heatmap">Click Here</a></p> -->
+            <!-- <div id="HEATMAP1">
+                <div id="HEATMAP2"></div>
+            </div> -->
+                   
+            
+        </div> 
+        
+
+    </div>
+</div>
+</body>
+</html>
+

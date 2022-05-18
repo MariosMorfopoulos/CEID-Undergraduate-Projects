@@ -1,0 +1,13 @@
+npm init -y
+npm i express ejs mongoose
+npm i method-override
+npm i geoip-lite ipstack express-fileupload
+npm i ipware
+npm i express-session
+npm i express connect-mongo
+// OXI npm i connect-mongo
+npm install ipify
+npm i connect-mongodb-session
+
+ npm install leaflet-map
+ npm install sweetalert

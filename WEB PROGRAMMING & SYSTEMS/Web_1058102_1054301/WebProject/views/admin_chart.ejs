@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      body{
+        background: linear-gradient(to bottom, #33ccff 0%, #f3f0f1 100%);
+      }
+      #mapid {
+        height: 180px;
+      }
+      h1 {text-align: center;}
+    </style>
+
+    <title>Admin Chart</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/morf_chart">Admin Chart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/morf_map">Admin Map</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/morf_stats">Admin Stats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin_c">Har file Stats</a>
+        </li>
+        <form action="/logout" method="POST">
+          <button>Sign Out</button>
+        </form>
+      </ul>
+    </nav>
+    <div>
+     
+    <h1>Admin Chart</h1>
+   
+      <label for="days"></label>
+      <select name="day" id="day" class="custom-select mb-3">
+        <option selected>Επέλεξε Μέρα</option>
+        <option value="2">Δευτέρα</option>
+        <option value="3">Τρίτη</option>
+        <option value="4">Τετάρτη</option>
+        <option value="5">Πέμπτη</option>
+        <option value="6">Παρασκευή</option>
+        <option value="7">Σάββατο</option>
+        <option value="1">Κυριακή</option>
+        <option value="9">Όλες</option>
+      </select>
+     
+
+      <label for="methods"></label>
+      <select name="method" id="method" class="custom-select mb-3">
+        <option selected>Επέλεξε Μέθοδο</option>
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="91">Όλες</option>
+      </select>
+      
+      <label for="methods"></label>
+      <select name="company" id="company" class="custom-select mb-3">
+        <option selected>Επέλεξε Εταιρεία</option>
+        <option value="wind">Wind</option>
+        <option value="cosmote">Cosmote</option>
+        <option value="Forthnet">Forthnet</option>
+        <option value="9">Όλες</option>
+      </select>
+
+      <label for="contents"></label>
+      <select name="content" id="content" class="custom-select mb-3">
+        <option selected>Επέλεξε Content Type:</option>
+        <option value="text/html; charset=utf-8">HTML</option>
+        <option value="text/javascript; charset=UTF-8">Text Javascript</option>
+        <option value="application/javascript; charset=utf-8">
+          Application Javascript
+        </option>
+        <option value="image/png">Image</option>
+        <option value="font/woff2">Font</option>
+        <option value="text/plain; charset=UTF-8">Text plain</option>
+        <option value="911">Όλες</option>
+      </select>
+
+      <button type="submit" id="submit" value="Submit" class="btn btn-primary">Submit</button>
+      <canvas id="myChart" width="300" height="300"></canvas>
+      <div id="mapid"></div>
+    
+   
+    <script src="admin_chart.js"></script>
+  </body>
+</html>

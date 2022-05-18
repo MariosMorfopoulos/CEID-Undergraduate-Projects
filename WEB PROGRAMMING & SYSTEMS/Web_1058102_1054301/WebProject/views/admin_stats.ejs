@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Stats</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      
+      body{
+        background: linear-gradient(to bottom, #33ccff 0%, #f3f0f1 100%);
+      }
+      h1 {
+        height: 160px;
+        text-align: center;
+      }
+      h4{        
+        text-align: center;
+      }
+      .column1 {
+      float: left;
+      width: 50%;
+      }
+    
+      #myChart2 {
+        height: 800px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/morf_chart">Admin Chart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/morf_map">Admin Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/morf_stats">Admin Stats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin_c">Har file Stats</a>
+          </li>
+          <form action="/logout" method="POST">
+            <button>Sign Out</button>
+          </form>
+        </ul>
+      </nav>
+      <br><br>
+    <div id="oli_forma">
+        <h1>Admin Stats</h1>
+        <br><br>
+
+        <div class="container">
+          <h2>Basic Table</h2>    
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Number of domains:</th>
+                <th>Number of isp:</th>
+                <th>Number of users:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><p id="url"></p></td>
+                <td><p id="isp"></p></td>
+                <td><p id="users"></p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+       
+        <br><br>
+        <div class="row1">
+          <div class="column1"> <h4>Our beloved methods</h4>
+            <canvas id="myChart" ></canvas>  </div>
+          <div class="column1"><h4>Our beloved status</h4>
+            <canvas id="myChart1" ></canvas>  </div>
+        </div>
+        <br><br>
+        <h4>Our beloved web objects</h4>
+        <canvas id="myChart2" width="300" height="300"></canvas>        
+        
+
+        <script src="admin_stats.js"></script>
+   </body>
+</html>

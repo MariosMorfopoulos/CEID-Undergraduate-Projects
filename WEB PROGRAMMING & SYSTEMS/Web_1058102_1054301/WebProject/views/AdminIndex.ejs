@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Stats</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script> 
+</head>
+  <body>
+    <div>
+        <a href="/admin_chart_1">Admin Chart</a> |
+        <a href="/admin_map_1">Admin Map</a> |
+        <a href="/admin_stats_1">Admin Stats</a>
+      </div> 
+    <div id="oli_forma">
+        <h1>Admin Stats</h1>
+        <h4 >Number of users:<p id="users"></p></h4>
+        <h4 >Number of domains:<p id="url"></p></h4>
+        <h4 >Number of isp:<p id="isp"></p></h4>
+        <h4>Our beloved methods</h4>
+        <canvas id="myChart" width="400" height="400"></canvas>        
+        <h4>Our beloved status</h4>
+        <canvas id="myChart1" width="400" height="400"></canvas>        
+        <h4>Our beloved web objects</h4>
+        <canvas id="myChart2" width="400" height="400"></canvas>        
+        <form action="/logout" method="POST">
+          <button>Sign Out</button>
+        </form>
+
+        <script src="AdminIndex.js"></script>
+   </body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <h1>EISAI MLKAS</h1>
+</body>
+</html> -->

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body{
+        background: linear-gradient(to bottom, #33ccff 0%, #f3f0f1 100%);
+      }
+      .row {
+            display: flex;
+            }
+      .column {
+          flex: 50%;
+          padding: 10px;
+          text-align: center;
+        }
+      #mapid {
+        height: 460px;
+        width: 580px;
+      }
+      h1 {
+        height: 160px;
+        text-align: center;
+      }
+    </style>
+
+    <title>Admin Map</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/morf_chart">Admin Chart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/morf_map">Admin Map</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/morf_stats">Admin Stats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin_c">Har file Stats</a>
+        </li>
+        <form action="/logout" method="POST">
+          <button>Sign Out</button>
+        </form>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <h1>Admin Map</h1>
+
+    <div class="row">
+      <div class="column">
+       
+        <h4>
+          Χάρτης ο οποίος ενώνει την τοποθεσία του χρήστη με τις τοποθεσίες των
+          server που έχουν γίνει αιτήσεις.
+        </h4>
+       
+      </div>
+      <div class="column">
+      <div id="mapid"></div></div>
+      </div>
+    </div>
+
+    <br /><br />
+    <form action="/logout" method="POST">
+      <button>Sign Out</button>
+    </form>
+    <script src="admin_map.js"></script>
+  </body>
+</html>
