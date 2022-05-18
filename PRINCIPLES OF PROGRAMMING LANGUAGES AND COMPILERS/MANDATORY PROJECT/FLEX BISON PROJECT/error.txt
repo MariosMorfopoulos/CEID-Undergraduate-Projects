@@ -1,0 +1,16 @@
+{
+
+"created_at":Mon Jun 1 10:01:00 2018,
+
+"text":"test 1" , 
+"id_str": "1000001" ,
+ 
+"user":
+  "name":"john",
+  "id":10000,
+  "screen_name":"user john",
+   "location":"patras"
+  }, 
+  
+"url":"http://www.in.gr"
+}

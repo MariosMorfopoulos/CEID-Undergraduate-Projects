@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=a
+comment0.target=Board(boolean)
+comment1.params=
+comment1.target=void\ drawBoards()
+comment2.params=gtile\ g
+comment2.target=java.lang.String\ getAdjacentTiles(Tile,\ java.lang.String)
+comment3.params=g2board
+comment3.target=void\ placeAllShips(Board)
+comment4.params=
+comment4.target=boolean\ allShipsSunk()
+numComments=5

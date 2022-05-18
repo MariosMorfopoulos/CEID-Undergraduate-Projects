@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ main()
+comment1.params=
+comment1.target=void\ getInput()
+comment2.params=
+comment2.target=int[]\ getRandInput()
+comment3.params=
+comment3.target=void\ getOrientation()
+comment4.params=
+comment4.target=void\ randomPlace()
+numComments=5
